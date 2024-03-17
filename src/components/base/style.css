@@ -1,0 +1,101 @@
+/* Input */
+.input-container {
+    font-size: 14px;
+    /* border: 1px solid red; */
+} .input-container label {
+    display: block;
+} .input-container input {
+    padding: 9px 12px; width: 100%;
+    border-radius: 4px; border: 1px solid #ccc
+} .input-wrapper {
+    padding-left: 30px; width: 100%; position: relative;
+    border-radius: 4px; border: 1px solid #ccc
+} .input-wrapper svg {
+    position: absolute; left: 12px; top: 10px;
+} .input-wrapper input {
+    padding: 9px 5px;
+    border:none
+} .input-container input:disabled {
+    background: none; border: none;
+} .input-wrapper:has(input:disabled) {
+    background: none; border: none;
+}
+
+/* Button */
+.btn {
+    padding: 10px 15px; border-radius: 3px; border: none; cursor: pointer;
+} .btn.success {
+    background: #28a745; color: #f2fcf0;
+} .btn.primary {
+    background: #007bff; color: #f2fcf0;
+} .btn.warning {
+    background: #ffc107; color: #2d431b;
+} .btn.danger {
+    background: #dc3545; color: #f2fcf0;
+} .btn.secondary {
+    background: #6c757d; color: #f2fcf0;
+} .btn svg {
+    padding-right: 6px;
+}
+.btn:active {
+    transform: scale(.98);
+}
+
+/* Table */
+.table-container {
+    width: 100%; height: 100%; overflow: auto;
+} .table-container table {
+    width: 100%; text-align: left; font-size: 12px;
+    border-collapse: collapse;
+} .table-container table thead {
+    position: sticky; top: 0; left: 0;
+} .table-container table thead tr th {
+    padding: 10px; font-weight: 500; background: #f0f0f0;
+} .table-container table tbody tr td {
+    padding: 10px; color: #444;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+} .table-container table tbody tr td img {
+    height: 25px;
+}
+
+/* Modal */
+.modal-container {
+    width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 1;
+    background: rgba(0,0,0,.5); overflow: auto;
+} .modal-content {
+    margin: 50px auto; width: 50%; border-radius: 4px; position: relative;
+    background: #fff; animation: slideDownModal .5s; font-size: 13px;
+} .modal-header {
+    padding: 15px 0; font-weight: 500; width: 100%; height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.modal-body {
+    width: 100%; height: calc(100% - 100px);
+    /* border: 1px solid red */
+} .modal-body ul {
+    padding: 0; margin: 0; list-style: none;
+    /* border: 1px solid red */
+} .modal-body div textarea {
+    padding: 5px; width: 100%; height: 150px; border-radius: 4px; border: 1px solid #bbb; resize: none;
+} .modal-body table {
+    border-collapse: collapse;
+} .modal-body table tbody tr.hover:hover {
+    background: #ececec;
+}
+.modal-footer {
+    padding: 7px 0; width: 100%; height: 50px; display: flex; justify-content: flex-end; gap: 5px;
+    /* border: 1px solid red; */
+}
+.modal-close {
+    padding: 3px 6px; position: absolute; top: 10px; right: 10px; color: #8d8d8d;
+    background: rgba(0,0,0,.2); border-radius: 50%; border: none; cursor: pointer;
+} .modal-close:hover {
+    color: #444; background: rgba(255,255,255,.2);
+} .modal-close:active {
+    transform: scale(.9);
+}
+
+@keyframes slideDownModal {
+    from {margin-top: 0px;}
+    to {margin-top: 50px;}
+}
